@@ -1,0 +1,43 @@
+.response-button {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transition: background-color 0.2s ease-in-out;
+
+  border: solid 1vw black;
+  box-sizing: border-box;
+
+  z-index: 5;
+}
+
+.response-button:hover {
+  background-color: pink;
+}
+
+.green {
+  top: 0;
+  left: 0;
+  background-color: green;
+  border-radius: 100% 0 0 0;
+}
+
+.red {
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 0 100% 0 0;
+}
+
+.yellow {
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  border-radius: 0 0 0 100%;
+}
+
+.blue {
+  bottom: 0;
+  right: 0;
+  background-color: blue;
+  border-radius: 0 0 100% 0;
+}

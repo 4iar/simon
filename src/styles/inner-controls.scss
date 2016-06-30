@@ -1,0 +1,16 @@
+.inner-circle {
+  // make it a circle
+ 	border-radius: 50%;
+	width: 50%;
+	height: 50%;
+
+  // vertical + horizontal centering
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  background: slategray;
+}

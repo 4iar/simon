@@ -1,0 +1,14 @@
+.background-circle {
+  // make it a circle
+  position: relative;
+ 	border-radius: 50%;
+	width: 50vw;
+	height: 50vw;
+
+  // centered horizontal alignment
+  margin: auto;
+
+  z-index: 1;
+
+  background: orange;
+}
