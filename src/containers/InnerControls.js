@@ -12,17 +12,11 @@ export default class InnerControls extends React.Component {
     return (
       <div className="inner-circle">
         <p className="simon-logo">Simon</p>
-
         <div className="middle-row">
-
           <Count />
-          
           <StartButton />
-
           <StrictModeButton />
-
         </div>
-
       </div>
     );
   }
