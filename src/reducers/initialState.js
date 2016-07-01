@@ -1,5 +1,6 @@
 const initialState = {
-  strictMode: false
+  strictMode: false,
+  count: 1
 };
 
 export default initialState;
