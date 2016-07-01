@@ -2,6 +2,7 @@ import React from 'react';
 
 import StrictModeButton from './StrictModeButton';
 import StartButton from './StartButton';
+import Count from './Count';
 
 import '../styles/inner-controls.scss';
 
@@ -13,11 +14,9 @@ export default class InnerControls extends React.Component {
         <p className="simon-logo">Simon</p>
 
         <div className="middle-row">
-          <section className="count">
-            <div className="count-counter">02</div>
-            <div className="count-text">COUNT</div>
-          </section>
 
+          <Count />
+          
           <StartButton />
 
           <StrictModeButton />
