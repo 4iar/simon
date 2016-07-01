@@ -7,7 +7,6 @@ $blue: #094A8F;
   position: absolute;
   width: 50%;
   height: 50%;
-  transition: background-color 0.2s ease-in-out;
 
   border: solid 1vw black;
   box-sizing: border-box;
@@ -15,8 +14,20 @@ $blue: #094A8F;
   z-index: 5;
 }
 
-.response-button:hover {
-  background-color: pink;
+.clickable-red:active {
+  background: lighten($red, 20%);
+}
+
+.clickable-green:active {
+  background: lighten($green, 20%);
+}
+
+.clickable-blue:active {
+  background: lighten($blue, 20%);
+}
+
+.clickable-yellow:active {
+  background: lighten($yellow, 20%);
 }
 
 .green {
