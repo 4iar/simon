@@ -1,3 +1,8 @@
+$green: #00A74A;
+$red: #9F0F17;
+$yellow: #CCA707;
+$blue: #094A8F;
+
 .response-button {
   position: absolute;
   width: 50%;
@@ -17,27 +22,27 @@
 .green {
   top: 0;
   left: 0;
-  background-color: green;
+  background-color: $green;
   border-radius: 100% 0 0 0;
 }
 
 .red {
   top: 0;
   right: 0;
-  background-color: red;
+  background-color: $red;
   border-radius: 0 100% 0 0;
 }
 
 .yellow {
   bottom: 0;
   left: 0;
-  background-color: yellow;
+  background-color: $yellow;
   border-radius: 0 0 0 100%;
 }
 
 .blue {
   bottom: 0;
   right: 0;
-  background-color: blue;
+  background-color: $blue;
   border-radius: 0 0 100% 0;
 }
