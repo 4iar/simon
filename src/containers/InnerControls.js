@@ -1,5 +1,7 @@
 import React from 'react';
 
+import StrictModeButton from './StrictModeButton';
+
 import '../styles/inner-controls.scss';
 
 export default class InnerControls extends React.Component {
@@ -19,11 +21,8 @@ export default class InnerControls extends React.Component {
             <div className="start-text">START</div>
           </section>
 
-          <section className="strict">
-            <div className="strict-indicator on"></div>
-            <button className="button strict-button"></button>
-            <div className="strict-text">STRICT</div>
-          </section>
+          <StrictModeButton />
+
         </div>
 
       </div>

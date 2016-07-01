@@ -1,5 +1,5 @@
 const initialState = {
-  placeholder: 0
+  strictMode: false
 };
 
 export default initialState;
