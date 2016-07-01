@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 import { toggleStrictMode } from '../actions/gameActions';
 
@@ -20,7 +20,7 @@ export default class StrictModeButton extends React.Component {
   }
 
   render() {
-    let indicatorClasses = classnames('strict-indicator', {on: this.props.strictMode});
+    let indicatorClasses = classNames('strict-indicator', {on: this.props.strictMode});
     return (
       <section className="strict">
         <div className={indicatorClasses}></div>
