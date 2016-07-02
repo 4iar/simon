@@ -4,6 +4,12 @@ const initialState = {
   sequence: {
     turn: 0,
     chain: []
+  },
+  buttonHighlight: {
+    red: false,
+    green: false,
+    yellow: false,
+    blue: false
   }
 };
 

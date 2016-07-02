@@ -18,3 +18,12 @@ export function setNextButton(nextButton) {
     }
   };
 }
+
+export function highlightButton(colour) {
+  return {
+    type: 'HIGHLIGHT_BUTTON',
+    payload: {
+      colour
+    }
+  };
+}

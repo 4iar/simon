@@ -19,6 +19,19 @@ export default function (state = initialState, action) {
           chain: state.sequence.chain.concat([action.payload.nextButton]),
           turn: 0
         }};
+    case 'HIGHLIGHT_BUTTON': {
+      let buttonHighlight = {
+        red: false,
+        green: false,
+        yellow: false,
+        blue: false
+      };
+      buttonHighlight[action.payload.colour] = true;
+      return {
+        ...state,
+        buttonHighlight
+      };
+    }
     default:
       return state;
   }
