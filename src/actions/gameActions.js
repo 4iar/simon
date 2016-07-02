@@ -9,3 +9,12 @@ export function toggleStrictMode() {
     type: 'TOGGLE_STRICTMODE'
   };
 }
+
+export function setNextButton(nextButton) {
+  return {
+    type: 'SET_NEXT_BUTTON',
+    payload: {
+      nextButton 
+    }
+  };
+}
