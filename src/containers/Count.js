@@ -12,6 +12,9 @@ const getCount = (state) => {
 @connect(getCount, null, null, {withRef: true})
 export default class Count extends React.Component {
   formatCount(count) {
+    if (count === 0) {
+      return '--';
+    }
     if (count < 10) {
       return '0' + count;
     }
