@@ -3,7 +3,13 @@ import initialState from './initialState';
 export default function (state = initialState, action) {
   switch (action.type) {
     case 'START_GAME':
-      return state;
+      return {...state,
+        count: 0,
+        sequence: {
+          chain: [],
+          turn: 0
+        }
+      };
     case 'TOGGLE_STRICTMODE':
       return {...state, strictMode: !state.strictMode};
     case 'SET_NEXT_BUTTON':
