@@ -49,6 +49,7 @@ export default function (state = initialState, action) {
       if (state.waitingForResponse) {
         return {...state,
           sequence: {...state.sequence,
+            turn: state.sequence.turn + 1,
             response: state.sequence.response.concat([action.payload.colour])
           }
         }
