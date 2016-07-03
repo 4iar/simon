@@ -1,7 +1,7 @@
 const initialState = {
   strictMode: false,
   count: 0,
-  waitingForResponse: true,
+  waitingForResponse: false,
   sequence: {
     turn: 0,
     chain: []
