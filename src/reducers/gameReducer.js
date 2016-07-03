@@ -39,7 +39,7 @@ export default function (state = initialState, action) {
         sequence: {...state.sequence,
           response: []
         }
-      }
+      };
     }
     case 'SET_RESPONSE_WAITING':
       return {...state,
@@ -52,7 +52,7 @@ export default function (state = initialState, action) {
             turn: state.sequence.turn + 1,
             response: state.sequence.response.concat([action.payload.colour])
           }
-        }
+        };
       } else {
         return state;
       }

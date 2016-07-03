@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
-import { buttonClicked } from '../actions/gameActions'
+import { buttonClicked } from '../actions/gameActions';
 
 import '../styles/outer-buttons.scss';
 
