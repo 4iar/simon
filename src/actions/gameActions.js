@@ -40,7 +40,7 @@ export function unsetWaitingForResponse() {
   return {
     type: 'SET_RESPONSE_WAITING',
     payload: {
-      waiting: true,
+      waiting: false 
     }
   }
 }
