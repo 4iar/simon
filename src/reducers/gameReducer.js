@@ -34,6 +34,13 @@ export default function (state = initialState, action) {
         buttonHighlight
       };
     }
+    case 'CLEAR_RESPONSES': {
+      return {...state,
+        sequence: {...state.sequence,
+          response: []
+        }
+      }
+    }
     case 'SET_RESPONSE_WAITING':
       return {...state,
         waitingForResponse: action.payload.waiting

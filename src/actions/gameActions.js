@@ -53,3 +53,9 @@ export function buttonClicked(colour) {
     }
   };
 }
+
+export function clearResponses() {
+  return {
+    type: 'CLEAR_RESPONSES'
+  };
+}
