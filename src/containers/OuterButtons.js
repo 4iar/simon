@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
+import { buttonClicked } from '../actions/gameActions'
+
 import '../styles/outer-buttons.scss';
 
 const getState = (state) => {
@@ -11,8 +13,12 @@ const getState = (state) => {
   };
 };
 
-@connect(getState, null, null, {withRef: true})
+@connect(getState, {buttonClicked}, null, {withRef: true})
 export default class OuterButtons extends React.Component {
+  
+  handleClick (colour) {
+    this.props.buttonClicked(colour);
+  }
 
   generateClasses () {
     let classes = {};
@@ -38,10 +44,10 @@ export default class OuterButtons extends React.Component {
 
     return (
       <div className="main">
-        <div className={classes['green']} />
-        <div className={classes['red']} />
-        <div className={classes['yellow']} />
-        <div className={classes['blue']} />
+        <div onClick={this.handleClick.bind(this, 'green')} className={classes['green']} />
+        <div onClick={this.handleClick.bind(this, 'red')} className={classes['red']} />
+        <div onClick={this.handleClick.bind(this, 'yellow')} className={classes['yellow']} />
+        <div onClick={this.handleClick.bind(this, 'blue')} className={classes['blue']} />
       </div>
     );
   }

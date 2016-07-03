@@ -44,3 +44,13 @@ export function unsetWaitingForResponse() {
     }
   }
 }
+
+export function buttonClicked(colour) {
+  return {
+    type: 'BUTTON_CLICKED',
+    payload: {
+      colour
+    }
+  };
+}
+

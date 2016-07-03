@@ -4,6 +4,7 @@ const initialState = {
   waitingForResponse: false,
   sequence: {
     turn: 0,
+    response: [],
     chain: []
   },
   buttonHighlight: {

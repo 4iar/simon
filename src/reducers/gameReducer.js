@@ -7,6 +7,7 @@ export default function (state = initialState, action) {
         count: 0,
         sequence: {
           chain: [],
+          response: [],
           turn: 0
         }
       };
@@ -17,6 +18,7 @@ export default function (state = initialState, action) {
         count: state.count + 1,
         sequence: {
           chain: state.sequence.chain.concat([action.payload.nextButton]),
+          response: [],
           turn: 0
         }};
     case 'HIGHLIGHT_BUTTON': {
@@ -36,6 +38,16 @@ export default function (state = initialState, action) {
       return {...state,
         waitingForResponse: action.payload.waiting
       };
+    case 'BUTTON_CLICKED':
+      if (state.waitingForResponse) {
+        return {...state,
+          sequence: {...state.sequence,
+            response: state.sequence.response.concat([action.payload.colour])
+          }
+        }
+      } else {
+        return state;
+      }
     default:
       return state;
   }
