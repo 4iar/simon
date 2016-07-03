@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Game from '../game-logic/game';
 
 import { startGame, setNextButton } from '../actions/gameActions';
 import getRandomButton from '../utils/getRandomButton';
@@ -12,6 +13,7 @@ export default class StartButton extends React.Component {
   handleClick() {
     this.props.startGame();
     this.props.setNextButton(getRandomButton());
+    this.game = new Game();
   }
 
   render() {

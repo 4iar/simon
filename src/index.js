@@ -6,6 +6,7 @@ import configureStore from './store/configureStore';
 import SimonPage from './containers/SimonPage';
 
 const store = configureStore();
+export default store;
 
 
 render(
