@@ -32,9 +32,9 @@ export function setWaitingForResponse() {
   return {
     type: 'SET_RESPONSE_WAITING',
     payload: {
-      waiting: true,
+      waiting: true
     }
-  }
+  };
 }
 export function unsetWaitingForResponse() {
   return {
@@ -42,7 +42,7 @@ export function unsetWaitingForResponse() {
     payload: {
       waiting: false 
     }
-  }
+  };
 }
 
 export function buttonClicked(colour) {
@@ -53,4 +53,3 @@ export function buttonClicked(colour) {
     }
   };
 }
-

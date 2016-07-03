@@ -23,5 +23,3 @@ export default class StartButton extends React.Component {
     );
   }
 }
-
-
