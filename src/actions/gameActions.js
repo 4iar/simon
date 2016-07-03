@@ -27,3 +27,20 @@ export function highlightButton(colour) {
     }
   };
 }
+
+export function setWaitingForResponse() {
+  return {
+    type: 'SET_RESPONSE_WAITING',
+    payload: {
+      waiting: true,
+    }
+  }
+}
+export function unsetWaitingForResponse() {
+  return {
+    type: 'SET_RESPONSE_WAITING',
+    payload: {
+      waiting: true,
+    }
+  }
+}

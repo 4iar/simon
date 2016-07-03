@@ -32,6 +32,10 @@ export default function (state = initialState, action) {
         buttonHighlight
       };
     }
+    case 'SET_RESPONSE_WAITING':
+      return {...state,
+        waitingForResponse: action.payload.waiting
+      };
     default:
       return state;
   }
