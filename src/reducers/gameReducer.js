@@ -49,7 +49,8 @@ export default function (state = initialState, action) {
         ...state,
         sequence: {
           ...state.sequence,
-          response: []
+          response: [],
+          turn: 0
         }
       };
     }
