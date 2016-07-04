@@ -18,7 +18,7 @@ export default class OuterButtons extends React.Component {
 
   handleMouseUp() {
     //TODO: use this for stopping tone sound
-    //this.props.stopAudio();
+    this.props.stopAudio();
   }
 
   handleMouseDown(colour) {
