@@ -83,11 +83,11 @@ export default class Game {
 
     let time = 1000;
     colours.forEach((colour) => {
-      window.setTimeout(this.lightButton.bind(this, colour), time - 250);
-      window.setTimeout(this.lightButton.bind(this, ''), 250);
+      window.setTimeout(this.lightButton.bind(this, colour), time);
+      window.setTimeout(this.lightButton.bind(this, ''), time - 300);
       time += 1000;
     });
-    window.setTimeout(this.lightButton.bind(this, ''), time);
+    window.setTimeout(this.lightButton.bind(this, ''), time - 300);
   }
 
   lightButton(colour) {
