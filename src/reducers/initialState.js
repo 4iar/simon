@@ -12,6 +12,12 @@ const initialState = {
     green: false,
     yellow: false,
     blue: false
+  },
+  audio: {
+    red: false,
+    green: false,
+    yellow: false,
+    blue: false
   }
 };
 

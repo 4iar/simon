@@ -59,3 +59,18 @@ export function clearResponses() {
     type: 'CLEAR_RESPONSES'
   };
 }
+
+export function playAudio(colour) {
+  return {
+    type: 'PLAY_AUDIO',
+    payload: {
+      colour
+    }
+  }
+}
+
+export function stopAudio() {
+  return {
+    type: 'STOP_AUDIO'
+  }
+}
