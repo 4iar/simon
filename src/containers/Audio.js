@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const getState = (state) => {
   return {
     audioToPlay: state.game.audio,
-    wrong: state.game.wrong
+    wrong: state.game.notifyWrong
   };
 };
 
