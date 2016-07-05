@@ -66,13 +66,13 @@ export function playAudio(colour) {
     payload: {
       colour
     }
-  }
+  };
 }
 
 export function stopAudio() {
   return {
     type: 'STOP_AUDIO'
-  }
+  };
 }
 
 export function beginNotifyWrong() {
