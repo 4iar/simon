@@ -74,3 +74,15 @@ export function stopAudio() {
     type: 'STOP_AUDIO'
   }
 }
+
+export function beginNotifyWrong() {
+  return {
+    type: 'BEGIN_NOTIFY_WRONG'
+  };
+}
+
+export function endNotifyWrong() {
+  return {
+    type: 'END_NOTIFY_WRONG'
+  };
+}

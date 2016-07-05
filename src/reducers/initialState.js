@@ -18,7 +18,8 @@ const initialState = {
     green: false,
     yellow: false,
     blue: false
-  }
+  },
+  notifyWrong: false
 };
 
 export default initialState;

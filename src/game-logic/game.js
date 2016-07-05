@@ -1,5 +1,5 @@
 import store from '../index.js';
-import { startGame, highlightButton, setWaitingForResponse, unsetWaitingForResponse, setNextButton, clearResponses } from '../actions/gameActions';
+import { endNotifyWrong, beginNotifyWrong, startGame, highlightButton, setWaitingForResponse, unsetWaitingForResponse, setNextButton, clearResponses } from '../actions/gameActions';
 import getRandomButton from '../utils/getRandomButton';
 
 export default class Game {
@@ -55,6 +55,7 @@ export default class Game {
         this.waitForPlayerResponse();
       }
     } else {
+      this.notifyWrong();
       if (this.store.getState().game.strictMode) {
         this.store.dispatch(unsetWaitingForResponse());
         this.resetGame();
@@ -92,5 +93,10 @@ export default class Game {
 
   lightButton(colour) {
     this.store.dispatch(highlightButton(colour));
+  }
+  
+  notifyWrong() {
+    this.store.dispatch(beginNotifyWrong());
+    window.setTimeout(this.store.dispatch.bind(this, endNotifyWrong()), 1000);
   }
 }

@@ -6,6 +6,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         count: 0,
+        notifyWrong: false,
         sequence: {
           chain: [],
           response: [],
@@ -95,6 +96,14 @@ export default function (state = initialState, action) {
       return {...state,
         audio};
     }
+    case 'BEGIN_NOTIFY_WRONG':
+      console.log("begin notify wrong");
+      return {...state,
+        notifyWrong: true};
+    case 'END_NOTIFY_WRONG':
+      console.log("endnotify wrong");
+      return {...state,
+        notifyWrong: false};
     default:
       return state;
   }
