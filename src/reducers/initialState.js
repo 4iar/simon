@@ -17,7 +17,8 @@ const initialState = {
     red: false,
     green: false,
     yellow: false,
-    blue: false
+    blue: false,
+    wrong: false
   },
   notifyWrong: false
 };
