@@ -1,0 +1,96 @@
+.inner-circle {
+  // make it a circle
+ 	border-radius: 50%;
+	width: 50%;
+	height: 50%;
+
+  // vertical + horizontal centering
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+
+  background: #ECE7EE;
+  border: solid 1.5vh #333333;
+}
+
+.simon-logo {
+  text-align: center;
+  font-size: 6.5vh;
+  font-weight: 700;
+  margin-top: 2.9vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+.middle-row {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: -6vh 2vh 0vh 2vh;
+
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+}
+
+.count, .start, .strict {
+  //background: red;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.count-text, .start-text, .strict-text {
+  margin-top: 0.5vh;
+  font-size: 1.5vh;
+}
+
+.count-counter {
+  background-color: #32050C;
+
+  // positioning
+  height: 4vh;
+  width: 6vh;
+  margin: auto;
+
+  border-radius: 0.75vh;
+  border: solid 0.2vh #222222;
+
+  // text stuff
+  color: #C60810;
+  font-size: 2.5vh;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 4.5vh;
+}
+
+.button {
+  height: 3vh;
+  width: 3vh;
+  margin: auto;
+
+  border: solid 5px #232323;
+
+  border-radius: 50%;
+}
+
+.start-button {
+  background: red;
+}
+
+.strict-button {
+  background: yellow;
+}
+
+.strict-indicator {
+  height: 1vh;
+  width: 1vh;
+  margin: auto;
+  margin-bottom: 5px;
+
+  border: solid 0.2vh black;
+  border-radius: 50%;
+}
+.on {
+  background: red;
+}
