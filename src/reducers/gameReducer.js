@@ -98,14 +98,12 @@ export default function (state = initialState, action) {
         audio};
     }
     case 'BEGIN_NOTIFY_WRONG':
-      console.log("begin notify wrong");
       return {...state,
         notifyWrong: true,
         audio: {...state.audio,
           wrong: true
         }};
     case 'END_NOTIFY_WRONG':
-      console.log("endnotify wrong");
       return {...state,
         notifyWrong: false,
         audio: {...state.audio,
