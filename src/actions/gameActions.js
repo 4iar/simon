@@ -86,3 +86,10 @@ export function endNotifyWrong() {
     type: 'END_NOTIFY_WRONG'
   };
 }
+
+export function gameWon() {
+  return {
+    type: 'GAME_WON'
+  };
+}
+

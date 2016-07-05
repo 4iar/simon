@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 const getCount = (state) => {
   return {
     count: state.game.count,
-    wrong: state.game.notifyWrong
+    wrong: state.game.notifyWrong,
+    won: state.game.won
   };
 };
 
@@ -15,6 +16,10 @@ export default class Count extends React.Component {
   formatCount(count) {
     if (this.props.wrong) {
       return '!!';
+    }
+    
+    if (this.props.won) {
+      return 'WIN';
     }
     
     if (count === 0) {

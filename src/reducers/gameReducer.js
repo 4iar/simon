@@ -7,6 +7,7 @@ export default function (state = initialState, action) {
         ...state,
         count: 0,
         notifyWrong: false,
+        won: false,
         sequence: {
           chain: [],
           response: [],
@@ -110,6 +111,10 @@ export default function (state = initialState, action) {
         audio: {...state.audio,
           wrong: false
         }};
+    case 'GAME_WON':
+      return {...state,
+        won: true
+      };
     default:
       return state;
   }

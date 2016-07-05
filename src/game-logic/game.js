@@ -1,5 +1,5 @@
 import store from '../index.js';
-import { endNotifyWrong, beginNotifyWrong, startGame, highlightButton, setWaitingForResponse, unsetWaitingForResponse, setNextButton, clearResponses } from '../actions/gameActions';
+import { gameWon, endNotifyWrong, beginNotifyWrong, startGame, highlightButton, setWaitingForResponse, unsetWaitingForResponse, setNextButton, clearResponses } from '../actions/gameActions';
 import getRandomButton from '../utils/getRandomButton';
 
 export default class Game {
@@ -49,6 +49,10 @@ export default class Game {
   handlePlayerResponse(sequence) {
     if (sequence.chain[sequence.turn - 1] === sequence.response[sequence.turn - 1]) {
       if (this.levelFinished()) {
+        if (this.store.getState().game.count == 20) {
+          this.store.dispatch(gameWon());
+          return;
+        }
         this.advanceLevel();
         this.store.dispatch(unsetWaitingForResponse());
       } else {

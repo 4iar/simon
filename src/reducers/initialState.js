@@ -20,7 +20,8 @@ const initialState = {
     blue: false,
     wrong: false
   },
-  notifyWrong: false
+  notifyWrong: false,
+  won: false
 };
 
 export default initialState;
